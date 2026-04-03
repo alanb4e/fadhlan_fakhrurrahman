@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fadhlan Fakhrurrahman | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Font: Syne untuk heading yang wide, Inter untuk body -->
+    <link href="https://fonts.googleapis.com/css2?family= Syne:wght@700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0f1115; color: #ffffff; }
+        .font-heading { font-family: 'Syne', sans-serif; }
+        .text-gradient {
+            background: linear-gradient(to right, #ff7e5f, #feb47b, #ffcc33);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gradient-orange {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+        }
+        .skill-bar {
+            height: 8px;
+            background: #1f2937;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(to right, #ff7e5f, #ffcc33);
+            border-radius: 10px;
+        }
+        .glass-card {
+            background: #161a1f;
+            border: 1px solid #232931;
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: #ff7e5f;
+            background: #1c2128;
+        }
+        /* Background abstract circles */
+        .bg-blur {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: rgba(255, 126, 95, 0.05);
+            filter: blur(100px);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav class="fixed w-full z-50 bg-[#0f1115]/80 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <span class="text-xl font-bold font-heading italic">Port<span class="text-[#ff7e5f]">folio</span></span>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#skills" class="hover:text-white transition">Skills</a>
+                <a href="#portfolio" class="hover:text-white transition">Portfolio</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center px-6 pt-20 overflow-hidden">
+        <div class="bg-blur top-20 right-[-100px]"></div>
+        <div class="bg-blur bottom-20 left-[-100px]"></div>
+        
+        <div class="max-w-7xl mx-auto w-full">
+            <span class="text-[#ff7e5f] font-bold tracking-[0.3em] text-sm uppercase mb-6 block">Graphic Designer</span>
+            <h1 class="text-6xl md:text-[120px] font-heading font-extrabold leading-[0.85] tracking-tighter mb-10">
+                Fadhlan <br>
+                <span class="text-gradient">Fakhrurrahman</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mb-12 leading-relaxed">
+                Saya berfokus pada pembuatan visual yang clean, komunikatif, dan menarik secara estetika — dari branding hingga social media design.
+            </p>
+            <div class="flex flex-wrap gap-5">
+                <a href="#about" class="bg-gradient-orange text-white px-10 py-4 rounded-xl font-bold transition hover:scale-105 active:scale-95 shadow-lg shadow-orange-500/20 text-center w-full md:w-auto">Tentang Saya</a>
+                <a href="#contact" class="border border-gray-700 hover:border-gray-500 text-white px-10 py-4 rounded-xl font-bold transition text-center w-full md:w-auto">Hubungi Saya</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section About (Centered & Balanced) -->
+    <section id="about" class="py-32 px-6 bg-[#0c0e12] relative overflow-hidden text-center">
+        <!-- Dekorasi Background -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/5 rounded-full blur-[120px] -z-10"></div>
+        
+        <div class="max-w-w-7xl mx-auto px-24">
+            <!-- Label Atas -->
+            <span class="text-[#ff7e5f] text-[10px] font-bold tracking-[0.6em] uppercase mb-8 block">
+                About Me
+            </span>
+
+            <!-- Judul Besar Terpusat -->
+            <h2 class="text-5xl md:text-7xl font-heading font-bold mb-20 leading-[1.1] tracking-tighter max-w-4xl mx-auto">
+                Menciptakan Visual yang <br>
+                <span class="text-gradient">Bermakna & Estetik.</span>
+            </h2>
+            
+            <!-- Konten 2 Kolom yang Balanced -->
+            <div class="grid md:grid-cols-2 gap-8 items-stretch text-left">
+                
+                <!-- Kolom Teks Deskripsi -->
+                <div class="glass-card p-10 md:p-14 rounded-[2.5rem] flex flex-col justify-center border border-gray-800/50">
+                    <p class="text-white text-xl leading-relaxed font-semibold italic mb-8">
+                        "Visual adalah bahasa pertama yang dilihat sebelum kata-kata dibaca."
+                    </p>
+                    <p class="text-gray-400 text-base leading-relaxed mb-6">
+                        Saya adalah seorang <span class="text-white font-bold italic text-lg">Graphic Designer</span> yang berfokus pada pembuatan visual yang clean, komunikatif, dan menarik secara estetika.
+                    </p>
+                    <p class="text-gray-400 text-base leading-relaxed">
+                        Saya memiliki pengalaman dalam membuat desain untuk kebutuhan digital seperti media sosial dan branding, memastikan setiap karya tidak hanya indah tapi juga fungsional.
+                    </p>
+                </div>
+
+                <!-- Kolom AE Card -->
+                <div class="bg-gradient-to-br from-[#161a1f] to-[#0f1115] p-10 md:p-14 rounded-[2.5rem] border border-gray-800 flex flex-col justify-center shadow-2xl relative overflow-hidden group">
+                    <!-- Dekorasi AE Logo Background -->
+                    <div class="absolute -right-10 -bottom-10 opacity-[0.03] group-hover:opacity-[0.08] transition duration-700">
+                        <span class="text-[200px] font-heading font-bold uppercase tracking-tighter">AE</span>
+                    </div>
+
+                    <p class="text-gray-300 text-lg leading-relaxed mb-10 font-light italic">
+                        "Dunia visual selalu berkembang, dan saya tumbuh bersamanya."
+                    </p>
+                    
+                    <div class="space-y-4 relative z-10">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="px-3 py-1 bg-orange-500/10 text-[#ff7e5f] rounded-lg text-[10px] font-bold uppercase tracking-widest border border-orange-500/20">Learning Path</span>
+                        </div>
+                        <p class="text-gray-400 text-base leading-relaxed">
+                            Saat ini saya juga sedang mempelajari <span class="text-white font-semibold underline decoration-[#ff7e5f] decoration-2 underline-offset-4">motion design</span> menggunakan <span class="text-[#ff7e5f] font-bold tracking-widest uppercase text-xs">Adobe After Effects</span>.
+                        </p>
+                        <p class="text-gray-400 text-sm">
+                            Tujuannya adalah memperluas kemampuan visual saya dalam menciptakan karya yang lebih dinamis dan hidup.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Skills & Tools -->
+    <section id="skills" class="py-32 px-6 bg-[#0c0e12]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <span class="text-[#ff7e5f] text-xs font-bold tracking-[0.4em] uppercase">Expertise</span>
+                <h2 class="text-5xl font-heading font-bold mt-4">Skills & Tools</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-20">
+                <!-- Skills (Progress Bars) -->
+                <div class="space-y-8">
+                    <h3 class="text-xl font-bold mb-12">Skills</h3>
+                    
+                    <div class="space-y-16">
+                        <div>
+                            <div class="flex justify-between mb-3 text-sm font-semibold text-gray-300 uppercase tracking-widest">
+                                <span>Graphic Design</span> <span>90%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-3 text-sm font-semibold text-gray-300 uppercase tracking-widest">
+                                <span>Visual Branding</span> <span>85%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-3 text-sm font-semibold text-gray-300 uppercase tracking-widest">
+                                <span>Social Media Design</span> <span>88%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-3 text-sm font-semibold text-gray-300 uppercase tracking-widest">
+                                <span>Layout & Composition</span> <span>85%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools (Cards) -->
+                <div>
+                    <h3 class="text-xl font-bold mb-10">Tools</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="glass-card p-5 rounded-2xl flex flex-col items-center text-center">
+                            <span class="text-4xl mb-4 relative w-24 h-24 flex items-center justify-center"> 
+                                <!-- Glow putih -->
+                                <div class="absolute inset-0 rounded-3xl bg-white blur-xl opacity-40"></div>
+                                <!-- Gambar -->
+                                <img src="image/ikon/figma.png" class="w-24 h-24 rounded-3xl object-cover relative z-10">
+                            </span>
+                            <span class="font-bold">Figma</span>
+                        </div>
+                        <div class="glass-card p-5 rounded-2xl flex flex-col items-center text-center">
+                            <span class="text-4xl mb-4 relative w-24 h-24 flex items-center justify-center"> 
+                                <!-- Glow putih -->
+                                <div class="absolute inset-0 rounded-3xl bg-white blur-xl opacity-40"></div>
+                                <!-- Gambar -->
+                                <img src="image/ikon/photoshop.png" class="w-24 h-24 rounded-3xl object-cover relative z-10">
+                            </span>
+                            <span class="font-bold">Adobe Photoshop</span>
+                        </div>
+                        <div class="glass-card p-5 rounded-2xl flex flex-col items-center text-center">
+                            <span class="text-4xl mb-4 relative w-24 h-24 flex items-center justify-center"> 
+                                <!-- Glow putih -->
+                                <div class="absolute inset-0 rounded-3xl bg-white blur-xl opacity-40"></div>
+                                <!-- Gambar -->
+                                <img src="image/ikon/illustrator.png" class="w-24 h-24 rounded-3xl object-cover relative z-10">
+                            </span>                            
+                            <span class="font-bold">Adobe Illustrator</span>
+                        </div>
+                        <div class="glass-card p-5 rounded-2xl flex flex-col items-center text-center">
+                            <span class="text-4xl mb-4 relative w-24 h-24 flex items-center justify-center"> 
+                                <!-- Glow putih -->
+                                <div class="absolute inset-0 rounded-3xl bg-white blur-xl opacity-40"></div>
+                                <!-- Gambar -->
+                                <img src="image/ikon/after effect.png" class="w-24 h-24 rounded-3xl object-cover relative z-10">
+                            </span>                            
+                            <span class="font-bold text-xs md:text-base">Adobe After Effects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Projects -->
+    <section id="portfolio" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl font-heading font-bold mb-20 text-center">Selected Projects</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <!-- Project 1 -->
+                <div class="glass-card rounded-[2.5rem] overflow-hidden group">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="image/projek1/preview projection mapping.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-2xl font-bold mb-4">Website Landing Page — Projection Mapping</h3>
+                        <p class="text-gray-400 text-sm mb-8 leading-relaxed">
+                            Website ini dibuat untuk mempromosikan jasa projection mapping dengan tampilan modern dan fokus pada visual yang menarik untuk kebutuhan event dan branding.
+                        </p>
+                        <a href="https://projection-magic-lab.lovable.app/" class="text-[#ff7e5f] font-bold uppercase tracking-widest text-xs flex items-center group/link">
+                            Lihat Website <svg class="w-4 h-4 ml-2 group-hover/link:translate-x-2 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card rounded-[2.5rem] overflow-hidden group">
+                    <div class="aspect-video overflow-hidden bg-slate-800">
+                        <!-- Gunakan placeholder atau screenshot dashboard tahfidz -->
+                        <img src="image/projek2/previesw aplikasi tahfidzh.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-2xl font-bold mb-4">Aplikasi Tahfidz (Sabaq, Sabqi, Manzil)</h3>
+                        <p class="text-gray-400 text-sm mb-8 leading-relaxed">
+                            Aplikasi ini dibuat untuk membantu pengguna dalam mengelola hafalan Al-Qur'an dengan sistem sabaq, sabqi, dan manzil secara terstruktur.
+                        </p>
+                        <a href="https://darulilmi-tahfidz-hub.lovable.app/" class="text-[#ff7e5f] font-bold uppercase tracking-widest text-xs flex items-center group/link">
+                            Lihat Website <svg class="w-4 h-4 ml-2 group-hover/link:translate-x-2 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Project 3: Social Media (Instagram OSIS) -->
+                <div>
+                    <div>
+                <div class="glass-card rounded-[2.5rem] p-8 md:p-14 mt-12" x-data="{ open: false }">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <span class="text-[#ff7e5f] text-[10px] font-bold tracking-[0.4em] uppercase mb-4 block text-center lg:text-left">Instagram Management</span>
+                            <h3 class="text-3xl md:text-4xl font-heading font-bold mb-6 leading-tight text-center lg:text-left italic">Social Media Design: <br>Kabinet Cakrawala</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-10 max-w-md text-center lg:text-left mx-auto lg:mx-0">
+                                Mendesain dan mengelola konten visual feed Instagram @best_prudent. Menjaga konsistensi visual dengan layout tematik yang rapi setiap bulannya.
+                            </p>
+                            
+                            <!-- TOMBOL BARU -->
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                                <!-- Direct Instagram Button -->
+                                <a href="https://www.instagram.com/best_prudent?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                                target="_blank" 
+                                class="flex items-center justify-center gap-3 bg-white text-[#0f1115] px-6 py-4 rounded-xl font-bold text-[10px] uppercase tracking-widest transition-all hover:bg-[#ff7e5f] hover:text-white group">
+                                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                    @best_prudent
+                                </a>
+
+                                <button @click="open = !open" class="border border-gray-700 hover:border-gray-500 text-white px-6 py-4 rounded-xl font-bold text-[10px] uppercase tracking-widest transition shadow-inner shadow-white/5">
+                                    <span x-text="open ? 'Tutup Galeri' : 'Lihat Galeri Lengkap'"></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 3-Image Preview Grid (Auto-fill) -->
+                        <div class="grid grid-cols-3 gap-4 h-full items-center">   
+                            <!-- Image 1: Agustus -->
+                            <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-gray-800 group/img">
+                                    <img src="image/projek3/5.png"
+                                        class="w-full h-full object-cover transition duration-500 group-hover/img:scale-105">
+                            </div>
+                            
+                            <!-- Image 2: Oktober (Sekarang Sejajar Lurus) -->
+                            <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-gray-800 group/img">
+                                <img src="image/projek3/6.png"
+                                    class="w-full h-full object-cover transition duration-500 group-hover/img:scale-105">
+                            </div>
+                            
+                            <!-- Image 3: November/Pamit -->
+                            <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-gray-800 group/img">
+                                <img src="image/projek3/7.png"
+                                    class="w-full h-full object-cover transition duration-500 group-hover/img:scale-105">
+                            </div>
+                        </div>
+                        </div>
+                <div x-show="open" 
+            x-transition:enter="transition ease-out duration-500" 
+            x-transition:enter-start="opacity-0 translate-y-10" 
+            class="mt-20 pt-20 border-t border-gray-800">
+        
+        <h4 class="text-center font-heading text-xl mb-12 italic text-gray-500 tracking-widest uppercase text-[10px]">Archive Feed 2024</h4>
+        
+        <!-- Container Pinterest Style -->
+        <!-- columns-2 untuk HP, columns-4 untuk Desktop -->
+        <div class="columns-2 md:columns-4 gap-4 space-y-4 max-w-7xl mx-auto">
+            
+            <!-- Gambar 1 (Portrait/Panjang) -->
+            <div class="break-inside-avoid rounded-2xl overflow-hidden bg-gray-800 border border-gray-700 cursor-zoom-in group mb-4"
+                @click="showModal = true; modalImg = 'https://i.ibb.co/LhqZpt6/debat-capres.jpg'">
+                <img src="image/projek3/1.png" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+            </div>
+
+            <!-- Gambar 2 (Square) -->
+            <div class="break-inside-avoid rounded-2xl overflow-hidden bg-gray-800 border border-gray-700 cursor-zoom-in group mb-4"
+                @click="showModal = true; modalImg = 'https://i.ibb.co/3s6qCgW/oktober.jpg'">
+                <img src="image/projek3/2.png" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+            </div>
+
+            <!-- Gambar 3 (Portrait) -->
+            <div class="break-inside-avoid rounded-2xl overflow-hidden bg-gray-800 border border-gray-700 cursor-zoom-in group mb-4"
+                @click="showModal = true; modalImg = 'https://i.ibb.co/D8m06m1/kami-pamit.jpg'">
+                <img src="mage/projek3/3.png" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+            </div>
+
+            <!-- Gambar 4 (Landscape/Lebar) -->
+            <div class="break-inside-avoid rounded-2xl overflow-hidden bg-gray-800 border border-gray-700 cursor-zoom-in group mb-4"
+                @click="showModal = true; modalImg = 'https://i.ibb.co/3s6qCgW/mpls-juli.jpg'">
+                <img src="image/projek3/4.png" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+            </div>
+
+            <!-- Gambar 4 (Landscape/Lebar) -->
+            <div class="break-inside-avoid rounded-2xl overflow-hidden bg-gray-800 border border-gray-700 cursor-zoom-in group mb-4"
+                @click="showModal = true; modalImg = 'https://i.ibb.co/LhqZpt6/agustus.jpg'">
+                <img src="image/projek3/5.png" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+            </div>
+
+            <!-- Gambar 5 (Landscape/Lebar) -->
+            <div class="break-inside-avoid rounded-2xl overflow-hidden bg-gray-800 border border-gray-700 cursor-zoom-in group mb-4"
+                @click="showModal = true; modalImg = 'https://i.ibb.co/LhqZpt6/agustus.jpg'">
+                <img src="image/projek3/6.png" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+            </div>
+
+            <!-- Gambar 6 (Landscape/Lebar) -->
+            <div class="break-inside-avoid rounded-2xl overflow-hidden bg-gray-800 border border-gray-700 cursor-zoom-in group mb-4"
+                @click="showModal = true; modalImg = 'https://i.ibb.co/LhqZpt6/agustus.jpg'">
+                <img src="image/projek3/7.png" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+            </div>
+
+            <!-- Gambar 7 (Landscape/Lebar) -->
+            <div class="break-inside-avoid rounded-2xl overflow-hidden bg-gray-800 border border-gray-700 cursor-zoom-in group mb-4"
+                @click="showModal = true; modalImg = 'https://i.ibb.co/LhqZpt6/agustus.jpg'">
+                <img src="image/projek3/8.png" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+            </div>
+
+            <!-- Gambar 8 (Landscape/Lebar) -->
+            <div class="break-inside-avoid rounded-2xl overflow-hidden bg-gray-800 border border-gray-700 cursor-zoom-in group mb-4"
+                @click="showModal = true; modalImg = 'https://i.ibb.co/LhqZpt6/agustus.jpg'">
+                <img src="image/projek3/9.png" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+            </div>
+
+            <!-- Gambar 9 (Landscape/Lebar) -->
+            <div class="break-inside-avoid rounded-2xl overflow-hidden bg-gray-800 border border-gray-700 cursor-zoom-in group mb-4"
+                @click="showModal = true; modalImg = 'https://i.ibb.co/LhqZpt6/agustus.jpg'">
+                <img src="image/projek3/10.png" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+            </div>
+
+            <!-- Gambar 10 (Landscape/Lebar) -->
+            <div class="break-inside-avoid rounded-2xl overflow-hidden bg-gray-800 border border-gray-700 cursor-zoom-in group mb-4"
+                @click="showModal = true; modalImg = 'https://i.ibb.co/LhqZpt6/agustus.jpg'">
+                <img src="image/projek3/11.png" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+            </div>
+            </div>
+    </div>
+
+        <!-- MODAL POP-UP (Lightbox) -->
+        <div x-show="showModal" 
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0"
+            x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-end="opacity-0"
+            class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#0f1115]/95 backdrop-blur-sm"
+            @keydown.escape.window="showModal = false"
+            style="display: none;">
+            
+            <!-- Tombol Close -->
+            <button @click="showModal = false" class="absolute top-10 right-10 text-white hover:text-[#ff7e5f] z-[110]">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+
+            <!-- Container Gambar Full -->
+            <div class="max-w-4xl w-full max-h-[90vh] flex items-center justify-center" @click.away="showModal = false">
+                <img :src="modalImg" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-gray-800">
+            </div>    
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="py-32 px-6 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-xs font-bold text-[#ff7e5f] uppercase tracking-[0.4em] mb-10">Mari Bekerja Sama</h2>
+            <a href="mailto:rahmanpe07@gmail.com" class="text-3xl md:text-6xl font-heading font-bold hover:text-[#ff7e5f] transition break-all">
+                rahmanpe07@gmail.com
+            </a>
+            
+            <div class="flex justify-center space-x-8 mt-20">
+                <a href="https://instagram.com/best_prudent" target="_blank" class="text-gray-400 hover:text-white font-bold text-xs uppercase tracking-widest transition">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white font-bold text-xs uppercase tracking-widest transition">Behance</a>
+                <a href="#" class="text-gray-400 hover:text-white font-bold text-xs uppercase tracking-widest transition">Dribbble</a>
+            </div>
+            
+            <p class="mt-32 text-gray-600 text-[10px] uppercase tracking-widest">
+                &copy; 2024 Fadhlan Fakhrurrahman. Crafted with Passion.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
