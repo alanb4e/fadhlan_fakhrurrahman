@@ -403,6 +403,82 @@
                 <img src="image/projek3/11.png" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
             </div>
             </div>
+        <!-- Project 4: Muda Mendunia (UI/UX & Branding) -->
+            <div class="glass-card rounded-[2.5rem] p-8 md:p-14 mt-12" x-data="{ openMuda: false }">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Kolom Teks (Kiri) -->
+                    <div class="order-2 lg:order-1">
+                        <span class="text-[#ff7e5f] text-[10px] font-bold tracking-[0.4em] uppercase mb-4 block text-center lg:text-left">UI/UX & Branding</span>
+                        <h3 class="text-3xl md:text-4xl font-heading font-bold mb-6 leading-tight text-center lg:text-left italic">
+                            Muda Mendunia: <br><span class="text-gradient">Social Movement Platform</span>
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-10 max-w-md text-center lg:text-left mx-auto lg:mx-0">
+                            Perancangan identitas visual dan antarmuka aplikasi untuk platform gerakan sosial. Fokus pada kemudahan navigasi bagi relawan muda dalam menyalurkan bantuan secara real-time.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <!-- Tombol Utama tetap Orange Gradient -->
+                            <button @click="openMuda = !openMuda" class="bg-gradient-orange text-white px-8 py-4 rounded-xl font-bold text-[10px] uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-lg shadow-orange-500/20">
+                                <span x-text="openMuda ? 'Tutup Galeri' : 'Lihat Detail Proyek'"></span>
+                            </button>
+                            
+                            <!-- Badge Kategori tetap Orange Style -->
+                            <div class="flex items-center gap-2 px-4 py-2 border border-gray-800 rounded-xl">
+                                <span class="w-2 h-2 bg-[#ff7e5f] rounded-full animate-pulse"></span>
+                                <span class="text-gray-400 text-[10px] font-bold uppercase tracking-widest">Case Study</span>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Preview Gambar Grid (Kanan) -->
+                    <div class="grid grid-cols-2 gap-4 order-1 lg:order-2">
+                        <div class="space-y-4">
+                            <div class="rounded-2xl overflow-hidden border border-gray-800 shadow-2xl group/muda">
+                                <img src="image/projek4/mobile1.png" class="w-full h-auto group-hover/muda:scale-110 transition duration-700">
+                            </div>
+                            <div class="rounded-2xl overflow-hidden border border-gray-800 shadow-2xl group/muda">
+                                <img src="image/projek4/logo.png" class="w-full h-auto group-hover/muda:scale-110 transition duration-700">
+                            </div>
+                        </div>
+                        <div class="pt-12 space-y-4">
+                            <div class="rounded-2xl overflow-hidden border border-gray-800 shadow-2xl group/muda">
+                                <img src="image/projek4/mobile2.png" class="w-full h-auto group-hover/muda:scale-110 transition duration-700">
+                            </div>
+                            <div class="rounded-2xl overflow-hidden border border-gray-800 shadow-2xl group/muda">
+                                <img src="image/projek4/mockup_kaos.png" class="w-full h-auto group-hover/muda:scale-110 transition duration-700">
+                            </div>
+                        </div>
+                    </div>
+    </div>
+
+    <!-- Gallery Full (Muncul saat diklik) -->
+    <div x-show="openMuda" 
+         x-transition:enter="transition ease-out duration-500" 
+         x-transition:enter-start="opacity-0 translate-y-10" 
+         class="mt-20 pt-20 border-t border-gray-800">
+        
+        <h4 class="text-center font-heading text-xl mb-12 italic text-gray-500 tracking-widest uppercase text-[10px]">Ecosystem Display</h4>
+        
+        <div class="columns-2 md:columns-3 gap-4 space-y-4">
+            <!-- Gambar Dashboard Web -->
+            <div class="break-inside-avoid rounded-2xl overflow-hidden border border-gray-800 bg-gray-900">
+                <img src="image/projek4/web.png" class="w-full h-auto">
+            </div>
+            <!-- Gambar Signage/Neon Box -->
+            <div class="break-inside-avoid rounded-2xl overflow-hidden border border-gray-800 bg-gray-900">
+                <img src="image/projek4/neonbox.png" class="w-full h-auto">
+            </div>
+            <!-- Gambar iPhone Icon -->
+            <div class="break-inside-avoid rounded-2xl overflow-hidden border border-gray-800 bg-gray-900">
+                <img src="image/projek4/iphone_icon.png" class="w-full h-auto">
+            </div>
+            <!-- Gambar Gotong Royong -->
+            <div class="break-inside-avoid rounded-2xl overflow-hidden border border-gray-800 bg-gray-900">
+                <img src="image/projek4/poster_sungai.png" class="w-full h-auto">
+            </div>
+        </div>
+    </div>
+</div>
     </div>
 
         <!-- MODAL POP-UP (Lightbox) -->
